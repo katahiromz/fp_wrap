@@ -1,5 +1,10 @@
+//////////////////////////////////////////////////////////////////////////////
+// fp_wrap.cpp --- FILE pointer wrapper class
+// Copyright (C) 2019 Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>
+// This file is public domain software.
+
 #ifndef FP_WRAP_HPP_
-#define FP_WRAP_HPP_     1   // Version 1
+#define FP_WRAP_HPP_     2   // Version 2
 
 #include <cstdio>
 #include <cstdarg>
@@ -50,6 +55,10 @@ public:
 
 protected:
     FILE *m_fp;
+
+private:
+    fp_wrap(const fp_wrap&);
+    fp_wrap& operator=(const fp_wrap&);
 };
 
 //////////////////////////////////////////////////////////////////////////////
