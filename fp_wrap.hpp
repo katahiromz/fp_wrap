@@ -4,7 +4,7 @@
 // This file is public domain software.
 
 #ifndef FP_WRAP_HPP_
-#define FP_WRAP_HPP_     3   // Version 3
+#define FP_WRAP_HPP_     4   // Version 4
 
 #include <cstdio>
 #include <cstdarg>
@@ -235,10 +235,10 @@ inline int fp_wrap::close()
     inline fp_wrap::fp_wrap(const wchar_t *fname, const wchar_t *mode)
         : m_fp(NULL)
     {
-        wopen(fname, mode);
+        open(fname, mode);
     }
 
-    inline bool fp_wrap::wopen(const wchar_t *fname, const wchar_t *mode)
+    inline bool fp_wrap::open(const wchar_t *fname, const wchar_t *mode)
     {
         using namespace std;
         close();
