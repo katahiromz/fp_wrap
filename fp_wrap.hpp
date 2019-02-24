@@ -4,7 +4,7 @@
 // This file is public domain software.
 
 #ifndef FP_WRAP_HPP_
-#define FP_WRAP_HPP_     2   // Version 2
+#define FP_WRAP_HPP_     3   // Version 3
 
 #include <cstdio>
 #include <cstdarg>
@@ -50,7 +50,7 @@ public:
 
 #ifdef _WIN32
     fp_wrap(const wchar_t *fname, const wchar_t *mode = L"rb");
-    bool wopen(const wchar_t *fname, const wchar_t *mode = L"rb");
+    bool open(const wchar_t *fname, const wchar_t *mode = L"rb");
 #endif
 
 protected:
